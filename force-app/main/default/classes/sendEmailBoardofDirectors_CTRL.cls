@@ -275,3 +275,4 @@ public with sharing class sendEmailBoardofDirectors_CTRL {
         }
     }
 }
+// new line added
