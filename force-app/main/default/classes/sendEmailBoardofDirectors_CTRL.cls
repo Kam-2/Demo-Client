@@ -276,3 +276,9 @@ public with sharing class sendEmailBoardofDirectors_CTRL {
     }
 }
 // new line added with remarks with all sets
+/**
+ * @author Kamal Raj
+ * @created March 17
+ * @description This class handles sending emails to Board of Directors, including major initiative roles. 
+ *              It allows adding CC and BCC recipients, attaching files, and logging email activities.
+ */
