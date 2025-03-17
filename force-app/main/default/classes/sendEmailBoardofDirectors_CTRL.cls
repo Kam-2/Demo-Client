@@ -1,9 +1,4 @@
-/**
- * @author Kamal Raj
- * @created 7thmar2025
- * @description This class handles sending emails to Board of Directors, including major initiative roles. 
- *              It allows adding CC and BCC recipients, attaching files, and logging email activities.
- */public with sharing class sendEmailBoardofDirectors_CTRL {
+public with sharing class sendEmailBoardofDirectors_CTRL {
     /**Send an email to the Major Initiative Roles --> Members will be autopopulated (related list of the meeting)
     * And also collecting the cc address from the end-user and will be inputted to the SingleEmailMessage
     * Then sendEmail method will be called
@@ -281,3 +276,9 @@
     }
 }
 // new line added with remarks with all sets
+/**
+ * @author Kamal Raj
+ * @created March 17
+ * @description This class handles sending emails to Board of Directors, including major initiative roles. 
+ *              It allows adding CC and BCC recipients, attaching files, and logging email activities.
+ */
