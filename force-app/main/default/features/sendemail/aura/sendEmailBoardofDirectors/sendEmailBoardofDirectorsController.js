@@ -4,7 +4,7 @@
         helper.sendAttendeeEmailhelper(component, MIid);
         helper.getEmailTempaltes(component, event);
     },
-    //new
+    //newone
     sendListEmail: function(component,event,helper){
         var MIid = component.get("v.recordId");
         var tC = component.get("v.ContactRolesList");

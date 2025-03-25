@@ -9,7 +9,7 @@
             'mbody': getbody,
             'MI_ID' : MIid
         });
-        //new
+        //newone
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
