@@ -7,6 +7,7 @@ public class sendEmailBoardofDirectors_CTRL_Test {
             Board_District360__c meet = new Board_District360__c(name='Test');
             meetlist.add(meet);
         //}
+        // new
         insert meetlist;
         System.assertEquals(1, meetlist.size());
 

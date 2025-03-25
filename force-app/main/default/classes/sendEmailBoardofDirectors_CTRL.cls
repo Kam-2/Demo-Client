@@ -3,6 +3,7 @@ public with sharing class sendEmailBoardofDirectors_CTRL {
     * And also collecting the cc address from the end-user and will be inputted to the SingleEmailMessage
     * Then sendEmail method will be called
     **/
+    //new
     Public static List<string> attachmentIDs = new list<string>();
     @AuraEnabled 
     public static void sendMailMethod(List<String> toAddress,List<String> ccAddress,List<String> bccAddress,String mSubject,String mbody,String MI_ID,List<string> AttachID){
