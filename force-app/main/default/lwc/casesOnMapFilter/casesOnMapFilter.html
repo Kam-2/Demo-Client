@@ -1,0 +1,88 @@
+<template>
+
+            
+    <div class="slds-grid slds-gutters" style="margin-left: 12px;font-family: sans-serif; font-size: small;font-weight: 600">
+        Service Request Status 
+    </div>
+     <div class="slds-grid">
+        <div class="slds-col">
+            <lightning-input type="checkbox" id="NewCases" label="Open" onchange={handleCheckboxChange} style="margin-left: 15px;font-size: 16px;font-weight: 600;" ></lightning-input>
+        </div>
+        <div class="slds-col">
+            <lightning-input type="checkbox" label="Working" onchange={handleCheckboxChange} style="font-size: 16px;font-weight: 600;"></lightning-input>
+        </div>
+        <div class="slds-col">
+            <lightning-input type="checkbox" label="Closed" onchange={handleCheckboxChange} style="font-size: 16px;font-weight: 600;"></lightning-input>
+        </div>
+    </div>
+    
+</br>
+
+    <div class="slds-grid slds-gutters" style="margin-left: 12px;font-family: sans-serif; font-size: small;font-weight: 600">
+        Service Request Priority 
+    </div>
+     <div class="slds-grid ">
+        <div class="slds-col" style="padding-left: 12px;padding-right: 0px;">
+            <lightning-input type="checkbox" label="High" onchange={handlePriorityCheckboxChange} style="margin-left: 15px;font-size: 16px;font-weight: 600;" ></lightning-input>
+        </div>
+        <div class="slds-col" style="padding-left: 10px;padding-right: 0px;">
+            <lightning-input type="checkbox" label="Medium" onchange={handlePriorityCheckboxChange} style="font-size: 16px;font-weight: 600;"></lightning-input>
+        </div>
+        <div class="slds-col" style="padding-left: 5px;padding-right: 12px;">
+            <lightning-input type="checkbox" label="Low" onchange={handlePriorityCheckboxChange} style="font-size: 16px;font-weight: 600;"></lightning-input>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-gutters" >
+        <div class="slds-col" style="padding-right: 0px;">
+            <lightning-input type="date" class="narrow-input" placeholder="Start Date" value={selectedFromDate} onchange={handleFromDateChange} style="margin-left: 15px;"></lightning-input>
+        </div>
+        <div class="slds-col" style="padding-top: 15px;padding-left:0px;">
+            <lightning-button-icon icon-name="utility:close" alternative-text="Clear" variant="bare" onclick={handleClearFromDate} style="padding-right: 0px;padding-left: 0px;padding-bottom: 0px;"></lightning-button-icon>
+            
+        </div>
+        
+        
+        <div class="slds-col" style="padding-right: 0px;padding-left:0px;">
+            <lightning-input class="narrow-input" type="date" data-id="To Date" placeholder="End Date" value={selectedToDate} onchange={handleToDateChange} ></lightning-input>
+        </div>
+        <div class="slds-col" style="padding-top: 15px;padding-left:0px;">
+            <lightning-button-icon icon-name="utility:close" alternative-text="Clear" variant="bare" onclick={handleClearToDate} style="padding-right: 0px;padding-left: 0px;padding-bottom: 0px;"></lightning-button-icon>
+            
+        </div>	
+    </div>
+    
+    <div class="slds-divider slds-m-top_x-small" style="border: 1px solid #ccc;margin-top: 10px;margin-bottom: 5px;"></div>
+    
+    
+    <lightning-input data-id="selectAllCheckbox" class="slds-p-left_xx-large" type="checkbox" style="margin-left: 15px;font-size: 16px;font-weight: 750;padding-left: 0px;" label="Select All" value="Select All" onchange={selectAll} disabled={isSubmitted} ></lightning-input>
+    <div class="selectall" style="max-height: 275px; overflow-y: auto;">
+        
+        <div class="category-list" >
+            <template for:each={categorySubcategoryPairs} for:item="categoryPair" for:index="indexValue">
+                <div class="category" key={categoryPair.categories} style="display: flex; margin-top: 10px; margin-left: 15px;font-size: 16px;font-weight: 600;">
+                    <lightning-input data-id="All checkbox" type="checkbox" label="" value={categoryPair.categories} onchange={handleCategoryChange} data-index={indexValue} data-type="Cat" disabled={isSubmitted}></lightning-input>
+        <img src={categoryPair.imageUrl} alt={categoryPair.categories} style="margin-left:-5px;margin-right:5px;width:35px; height: 35px;">
+                 <span style="font-size: 14px;" class="slds-form-element__label"> {categoryPair.categories}</span>
+                </div>
+                
+                <template for:each={categoryPair.subcategories} for:item="subcategoryPair" for:index="subIndexValue">
+                    <div class="subcategory" key={subcategoryPair.name} style="margin-left: 30px;font-size: 16px;font-weight: 600;">
+                        <lightning-input data-id="All checkbox"  type="checkbox" label={subcategoryPair.name} onchange={handleSubcategoryChange} value={subcategoryPair.name} data-index={subIndexValue} data-category={categoryPair.categories} data-type="subCat" disabled={isSubmitted} ></lightning-input>
+                    </div>
+                    
+                    <template for:each={subcategoryPair.sub_subcategories} for:item="subSubcategory" for:index="subSubIndexValue">
+                        <div class="sub-subcategory" key={subSubcategory} style="margin-left: 45px;font-size: 16px;">
+                            <lightning-input data-id="All checkbox" type="checkbox" label={subSubcategory} onchange={handleSubSubcategoryChange} data-index={subSubIndexValue} data-category={categoryPair.categories} data-subcategory={subcategoryPair.name} data-type="sub-subCat" disabled={isSubmitted}></lightning-input>
+                        </div>
+                    </template>
+                    
+                </template>
+            </template>
+        </div>
+    </div> 
+    
+    <div class="slds-divider slds-m-top_x-small" style="border: 1px solid #ccc;margin-top: 10px;margin-bottom: 5px;"></div>
+    
+    
+</template>

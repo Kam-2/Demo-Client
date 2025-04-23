@@ -1,0 +1,340 @@
+.map-root{
+    height: 80vh;
+
+}
+
+@font-face {
+  font-family: myFirstFont;
+      src:url(/resourceUrl/CssAeonic);
+
+}
+
+/* Modify map color or style */
+.leaflet-root {
+    background-color: #13f7ab; /* Change the background color of the map */
+    /* Add more styling here for the map elements as needed */
+}
+.slds-spinner_container{
+z-index: 9998 !important;
+}
+
+.bck{
+    background-color: #fff;
+
+}
+.cursr{
+  margin: 10px 0px;
+  cursor: pointer;
+  align-items: center;
+   justify-content: center;
+  display: flex;
+}
+.bkknnr{
+  background-color: #fff;
+  height:85px;
+  width:89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  flex-direction: column;
+
+}
+
+
+.pop{
+  margin: 10px 0px;
+  cursor: pointer;
+  align-items: center;
+   justify-content: center;
+  display: flex;
+}
+
+.popup{
+  padding-left:5px;
+    padding-top:1px;
+
+ background: #FFFFFF;
+box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+border-radius: 7px;
+  width:220px;
+  height:60px;
+  display:flex;
+  align-items: left;
+  justify-content: space-evenly;
+  
+
+}
+.bkknnr.active{
+   background-color:rgb(143, 75, 117);
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(235, 201, 222);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 0px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.searchbtn{
+ 
+      margin-left: 230px;
+
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.fontclass{
+  font-size: 13px;
+  font-weight: 500;
+  font-family: myFirstFont;
+}
+.sidebar .closebtn {
+  position: absolute;
+  
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+
+
+.openCSS{
+
+  margin-left:250px ;
+}
+
+.openCSS1{
+
+  width:250px;
+}
+
+.openCSS2{
+  margin-left:0px;
+  
+}
+
+.openCSS3{
+  width:0px;
+  
+}
+.fontstyle{
+  font-color:red;
+}
+.slds-m-around_medium{
+  display: flex;
+  align-items: center;
+} 
+.topbar__content{
+display: flex;
+align-items: center;
+justify-content: space-between;  
+}
+.topbar__cont>h1{
+  display: flex;
+align-items: center;
+justify-content: space-between;  
+  background-color: #ffedf9;
+  padding: 15px 45px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* .map__type>h1{
+ 
+  background-color: #ffedf9;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top:5px;
+  padding-right:32px;
+  padding-left:10px;
+} */
+
+.map__type {
+    background-color: #ffedf9;
+    border-radius: 10px;
+    font-weight: bold;
+   
+    
+}
+
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color:white;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;}
+
+.flex-parent-element {
+  display: flex;
+  width: 50%;
+}
+
+.flex-child-element {
+  flex: 1;
+  border: 2px solid blueviolet;
+  margin: 10px;
+}
+
+.flex-child-element:first-child {
+  margin-right: 20px;
+}
+
+.navi,
+.infoi {
+
+width:340px;
+position: absolute;
+
+left: 0;
+}
+.infoi {
+z-index: 10;
+}
+.leaflet-popup-content-wrapper {
+  text-align: centre;
+}
+.narrow-input {
+    width: 125px; /* Adjust the width as needed */
+    position: relative;
+    align-items: top;
+}
+
+.sub-subcategory {
+        display: none;
+    }
+
+
+.subcategory {
+    display: none;
+}
+
+.clear-link {
+     top: 5px;  
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue; 
+}
+
+.cancel-image {
+    width: 16px; /* Adjust the width as needed */
+}
+
+.clear-link:hover {
+    text-decoration: none; 
+}
+
+/* .top-right-container {
+    position: absolute;
+    top: 0px;
+    right: 190px;
+    align-items: center;
+     background-color: #ffedf9;
+    border-radius: 10px;
+    font-weight: bold;
+} */
+
+.top-right-container {
+    position: absolute;
+    top: 0px;
+    right: 160px;
+    /* display: flex;
+align-items: center;
+justify-content: space-between;   */
+ /*    justify-content: space-between; Aligns span and combobox on opposite sides 
+    align-items: center; Centers items vertically */
+    /* background-color: #ffedf9; */
+    /* border-radius: 10px; */
+    padding: 24px; /* Adds some padding for spacing */
+    font-weight: bold;
+    width: 241px; /* Adjust width as needed */
+    /* height :67px; */
+}
+
+.topbar__cont33 {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between each tile */
+    /* padding: 20px; */
+    background-color: #ffffff; /* Container background color */
+    justify-content: center;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 150px;  Set consistent width for tiles */
+    height: 100px; /* Adjust height as needed */
+    background-color: #5a67d8; /* Background color similar to the image */
+    color:white; /* Text color */
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tile-number {
+    font-size: 1.5em; /* Larger font size for numbers */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tile-label {
+    font-size: 0.9em; /* Smaller font size for labels */
+}
+
+.tile-label1 {
+    font-size: 0.9em; /* Smaller font size for labels */
+}
+
+.lightning-combobox {
+    width: 100%;
+       text-align: center;
+    margin-top: 0px;
+}
+
+.tile label.tile-label {
+    font-size: 0.9em;
+    font-weight: bold;
+    color:  rgb(202, 200, 200);
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+}

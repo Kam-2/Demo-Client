@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:appHostable,force:hasRecordId,lightning:actionOverride">
+ 
+        <c:editCaseLwcComp recordId="{!v.recordId}" objectName="Case" fieldSetName="Your_Field_Set_Name"/>
+   
+ <ltng:require styles="{!$Resource.DescriptionCss}"/>	
+    <!--  <ltng:require styles="{! $Resource.custom_style}"/> -->
+</aura:component>
